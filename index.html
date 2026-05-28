@@ -103,16 +103,35 @@
 }
 
 .hint-text { margin-top:25px; text-align:center; font-family:'Montserrat',sans-serif; font-size:11px; color:#d4af37; letter-spacing:2px; opacity:0.8; animation:pulse 2s infinite; text-transform:uppercase; }
-        /* ====== MAIN ====== */
-        #main-invitation {
-            min-height:100vh;
-            background:url('assets/imagen.jpg') no-repeat center center;
-            background-size:cover;background-attachment:fixed;
-            position:relative;display:flex;flex-direction:column;align-items:center;
-            padding:60px 20px;opacity:0;transform:translateY(20px);
-            transition:opacity 1.5s ease-out 0.6s,transform 1.5s ease-out 0.6s;
-        }
-        body.content-active #main-invitation { opacity:1;transform:translateY(0); }
+       /* ====== MAIN ====== */
+#main-invitation {
+    min-height: 100vh;
+    position: relative; 
+    display: flex; flex-direction: column; align-items: center;
+    padding: 60px 20px; 
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 1.5s ease-out 0.6s, transform 1.5s ease-out 0.6s;
+    /* Quitamos el background de aquí para evitar el bug de iOS */
+}
+
+/* Creamos una capa fija exclusiva para el fondo */
+#main-invitation::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/imagen.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Lo enviamos hasta atrás */
+    will-change: transform; /* Optimización de hardware */
+    image-rendering: high-quality; /* Fuerza al navegador a no perder calidad */
+}
+
+body.content-active #main-invitation { 
+    opacity: 1; transform: translateY(0); 
+}
 
         /* ====== FRAME CON BRILLOS ====== */
         .invitation-frame {
