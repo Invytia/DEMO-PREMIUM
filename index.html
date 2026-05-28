@@ -124,22 +124,23 @@
             backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
             border-radius:4px;overflow:visible;
         }
-        /* ====== FOTO HERO EDITORIAL ====== */
+     /* ====== FOTO HERO EDITORIAL ====== */
 .hero-photo-wrap {
-    width: 150px; 
-    height: 200px; 
-    margin: 0 auto 20px auto;
-    border-radius: 120px 120px 0 0; /* Corte de arco estilo editorial */
-    padding: 5px;
+    width: 240px;  /* Ancho aumentado */
+    height: 320px; /* Alto aumentado */
+    margin: 0 auto 25px auto;
+    border-radius: 120px 120px 0 0; /* Ajuste para mantener el arco perfecto (la mitad del ancho) */
+    padding: 6px; /* Un marco blanco ligeramente más visible */
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(195,170,175,0.4);
     box-shadow: 0 15px 35px rgba(89,74,78,0.1);
 }
+
 .hero-photo {
     width: 100%; 
     height: 100%; 
     object-fit: cover;
-    border-radius: 115px 115px 0 0;
+    border-radius: 114px 114px 0 0; /* Ajuste del radio interno para que embone exacto */
 }
 
 /* ====== HASHTAG ====== */
