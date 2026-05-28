@@ -399,6 +399,22 @@
         .map-card-direccion { font-family:'Montserrat',sans-serif;font-size:11px;font-weight:400;color:var(--text-muted);line-height:1.6;margin-bottom:8px; }
         .map-wrapper { width:100%;height:175px;border-radius:4px;overflow:hidden;border:1px solid rgba(213,189,175,0.3); }
 
+        /* ====== GALERÍA ====== */
+.galeria-contenedor {
+    width: 100%;
+    margin-top: 18px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 30px rgba(100, 60, 80, 0.15);
+    position: relative;
+}
+.galeria-img {
+    width: 100%;
+    display: block;
+    height: auto;
+    transition: transform 0.5s ease;
+}
         /* ====== ITINERARIO NUEVO ====== */
        .itinerario-timeline {
     margin-top:20px;
@@ -798,6 +814,17 @@
     <div style="border-radius: 12px; overflow: hidden; margin-bottom: 18px; border: 1px solid rgba(255,255,255,0.3);">
         <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
+
+    <div class="divider-ornate"><div class="divider-ornate-diamond"></div></div>
+
+<div class="bloque-vidrio-alt">
+    <div class="section-heading">Galería</div>
+    <p class="rsvp-intro" style="margin-bottom: 12px;">Un pequeño vistazo a mi sesión de fotos profesional antes del gran día.</p>
+    
+    <div class="galeria-contenedor">
+        <img src="assets/galeria.png" alt="Sesión de fotos Paula" class="galeria-img">
+    </div>
+</div>
     
     <a href="LINK_A_TU_PLAYLIST_COLABORATIVA" target="_blank" style="text-decoration: none;">
         <button class="btn-confirmar" style="background: linear-gradient(135deg, #1DB954, #1aa34a);">
